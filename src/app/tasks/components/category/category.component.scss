@@ -1,0 +1,27 @@
+@import "/src/styles.scss";
+
+.container {
+    @include container
+}
+
+.card {
+    width: 14rem;
+    height: 9rem;
+    background-color: $cardColor;
+    border-radius: 2rem;
+    padding: 2rem 3rem 0;
+}
+
+.mat-icon {
+    font-size: 2rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 0;
+}

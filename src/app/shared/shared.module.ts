@@ -6,5 +6,6 @@ import { TaskComponent } from './components/task/task.component';
 @NgModule({
   declarations: [TaskComponent],
   imports: [CommonModule, MaterialModule],
+  exports: [MaterialModule],
 })
 export class SharedModule {}
