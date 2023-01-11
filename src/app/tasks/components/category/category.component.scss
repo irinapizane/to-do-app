@@ -5,11 +5,12 @@
 }
 
 .card {
-    width: 14rem;
-    height: 9rem;
+    min-width: 12rem;
+    height: 8rem;
     background-color: $cardColor;
     border-radius: 2rem;
     padding: 2rem 3rem 0;
+    margin: 1rem;
 }
 
 .mat-icon {
