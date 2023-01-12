@@ -16,6 +16,3 @@ export class CategoryComponent {
 
   constructor(private router: Router) {}
 }
-
-
-

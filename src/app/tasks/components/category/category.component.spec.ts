@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CategoryComponent } from './category.component';
+import { Category } from '../../models/category';
 
 describe('CategoryComponent', () => {
   let component: CategoryComponent;
@@ -8,12 +9,12 @@ describe('CategoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CategoryComponent ]
-    })
-    .compileComponents();
+      declarations: [CategoryComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CategoryComponent);
     component = fixture.componentInstance;
+    component.category = { id: 1, title: 'example title', items: 0 };
     fixture.detectChanges();
   });
 
