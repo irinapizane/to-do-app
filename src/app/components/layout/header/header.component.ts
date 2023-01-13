@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { appData } from 'src/app/constants/constants';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  title = 'manage your tasks';
+  title = appData.appTitle;
 
   constructor() {}
 }
