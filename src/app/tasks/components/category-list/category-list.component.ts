@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Category } from '../../models/category';
+import { Category } from '../../models/category.model';
 import { categories as data } from 'src/app/tasks/data/categories';
 
 

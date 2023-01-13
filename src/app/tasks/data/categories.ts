@@ -1,4 +1,4 @@
-import { Category } from '../models/category';
+import { Category } from '../models/category.model';
 
 export const categories: Category[] = [
   { id: 1, title: 'meetings', items: 13 },
