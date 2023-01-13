@@ -28,4 +28,12 @@ describe('SingleCategoryComponent', () => {
     const component = fixture.componentInstance;
     expect(component['route'] instanceof ActivatedRoute).toBeTruthy();
   });
+
+  it('should call next and unsubscribe$', () => {
+    spyOn(component.unsubscribe$, 'next');
+    spyOn(component.unsubscribe$, 'complete');
+    component.ngOnDestroy();
+    expect(component.unsubscribe$.next).toHaveBeenCalled();
+    expect(component.unsubscribe$.complete).toHaveBeenCalled();
+  });
 });

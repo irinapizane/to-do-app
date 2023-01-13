@@ -11,7 +11,10 @@ import { Category } from '../../models/category.model';
 })
 export class SingleCategoryComponent implements OnInit, OnDestroy {
   category?: Category;
-  private unsubscribe$ = new Subject<void>();
+  private _unsubscribe$ = new Subject<void>();
+  get unsubscribe$() {
+    return this._unsubscribe$;
+  }
 
   constructor(private route: ActivatedRoute) {}
 
