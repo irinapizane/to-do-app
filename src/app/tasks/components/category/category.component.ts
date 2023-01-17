@@ -9,6 +9,7 @@ import { Router } from '@angular/router'
 })
 export class CategoryComponent {
   @Input() category: Category
+  component: CategoryComponent;
 
   goToSingleCategory(title: string) {
     this.router.navigate(['/category', title])
