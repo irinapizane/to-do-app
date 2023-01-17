@@ -1,0 +1,35 @@
+@import "/src/styles.scss";
+
+.container {
+    @include container
+}
+
+.card {
+    min-width: 12rem;
+    height: 8rem;
+    background-color: $cardColor;
+    border-radius: 2rem;
+    padding: 2rem 3rem 0;
+    margin: 1rem;
+    transform: translateY(0);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+}
+
+.mat-icon {
+    font-size: 2rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 0;
+}

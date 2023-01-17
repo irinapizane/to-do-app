@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { HeaderComponent } from './components/layout/header/header.component';
-import { CategoryComponent } from './components/category/category.component';
+import { SharedModule } from './shared/shared.module';
+import { TasksModule } from './tasks/tasks.module';
 
 
 @NgModule({
@@ -15,13 +16,14 @@ import { CategoryComponent } from './components/category/category.component';
     AppComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent,
-    CategoryComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule,
+    TasksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

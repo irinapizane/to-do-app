@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-
+import { appData } from 'src/app/constants/constants';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  title = 'manage your tasks'
+  title = appData.appTitle;
 
-  constructor() { }
-
+  constructor() {}
 }
