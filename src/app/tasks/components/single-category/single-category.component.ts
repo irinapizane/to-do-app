@@ -11,24 +11,22 @@ import { Category } from '../../models/category.model';
 })
 export class SingleCategoryComponent implements OnInit, OnDestroy {
   category?: Category;
-  private _unsubscribe$ = new Subject<void>();
-  get unsubscribe$() {
-    return this._unsubscribe$;
-  }
+  private unsubscribe$ = new Subject<void>();
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.params.pipe(takeUntil(this.unsubscribe$)).subscribe((params) => {
-      const title = (params as { title: string })['title'];
+      console.log('params.title', params.title);
+      console.log('categories', categories);
       const foundCategory = categories.find(
-        (c) => c.title.toLowerCase() === title.toLowerCase()
+        (c) => c.title.toLowerCase() === params.title.toLowerCase()
       );
       if (foundCategory) {
         this.category = foundCategory;
       } else {
         console.log('Category not found');
-      }
+      } 
     });
   }
 
