@@ -1,0 +1,31 @@
+@import "/src/styles.scss";
+
+.card {
+    min-width: 4rem;
+    min-height: 6rem;
+    max-width: 50%;
+    background-color: $cardColor-white;
+    border-radius: 1rem;
+    border: 0.15rem solid;
+    border-color: $cardColor;
+    padding: 0 0 1rem 3rem;
+    margin: 2rem auto;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    h3 {
+        margin: 1.5rem 0;
+    }
+}

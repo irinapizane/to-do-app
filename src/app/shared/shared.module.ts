@@ -4,8 +4,8 @@ import { MaterialModule } from './material.module';
 import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
-  declarations: [TaskComponent],
-  imports: [CommonModule, MaterialModule],
-  exports: [MaterialModule],
+    declarations: [TaskComponent],
+    exports: [MaterialModule, TaskComponent],
+    imports: [CommonModule, MaterialModule]
 })
 export class SharedModule {}
