@@ -4,39 +4,33 @@
     min-width: 4rem;
     min-height: 6rem;
     max-width: 50%;
-    background-color: $cardColor-white;
-    border-radius: 1rem;
-    border: 0.15rem solid;
+    border: 0.1rem solid;
     border-color: $cardColor;
-    padding: 0 0 1rem 3rem;
+    padding: 1.5rem 0 0 3rem;
     margin: 2rem auto;
     transition: all 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
 
     &:hover {
         transform: translateY(-3px);
-        cursor: pointer;
-    }
-
-    p {
-        font-size: 1.25rem;
-        margin: 0;
-    }
-
-    h3 {
-        margin: 1.5rem 0;
     }
 }
 
-.title {
+.card-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 }
+
 
 .menu-button {
     background-color: #fff;
     padding: 0;
     border: none;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+mat-card-header, mat-card-subtitle {
+    margin-top: 1rem !important;
 }
