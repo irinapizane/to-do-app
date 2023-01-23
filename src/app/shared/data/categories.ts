@@ -58,7 +58,7 @@ export const categories: Category[] = [
   {
     id: 3,
     title: 'shopping',
-    items: 9,
+    items: 4,
     tasks: [
       {
         id: 1,
