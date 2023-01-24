@@ -5,7 +5,6 @@ import { SharedModule } from '../shared/shared.module';
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import { SingleCategoryComponent } from './components/single-category/single-category.component';
 import { RouterModule, Routes } from '@angular/router';
-import { TaskComponent } from '../shared/components/task/task.component';
 
 const routes: Routes = [
   { path: 'category/:title', component: SingleCategoryComponent},
