@@ -7,14 +7,14 @@ import { SingleCategoryComponent } from './components/single-category/single-cat
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'category/:title', component: SingleCategoryComponent },
+  { path: 'category/:title', component: SingleCategoryComponent},
 ];
 
 @NgModule({
   declarations: [
     CategoryComponent,
     CategoryListComponent,
-    SingleCategoryComponent,
+    SingleCategoryComponent
   ],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
   exports: [CategoryComponent, CategoryListComponent],

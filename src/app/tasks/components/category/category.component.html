@@ -1,11 +1,16 @@
+
 <div class="container">
-    <div class="card" (click)="goToSingleCategory(category.title)">
-        <div class="title">
+<mat-card (click)="goToSingleCategory(category.title)" class="card">
+    <mat-card-content >
+        <mat-card-header>
             <h3> {{ category.title | titlecase }}</h3>
-            <mat-icon aria-hidden="false" aria-label="arrow circle right">arrow_circle_right</mat-icon>
-        </div>
-        <div class="item-number">
-            <p>{{ category.items }} items in the list</p>
-        </div>
-    </div>
+            <mat-icon aria-hidden="false" aria-label="arrow forward right">arrow_forward_ios</mat-icon>
+        </mat-card-header>
+        <mat-card-subtitle>
+            <div class="item-number">
+                <p>{{ category.items }} items in the list</p>
+            </div>
+        </mat-card-subtitle>
+    </mat-card-content>
+</mat-card>
 </div>
