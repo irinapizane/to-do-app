@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { CategoryComponent } from './category.component';
-import { categories } from '../../../shared/data/categories';
+import { categories } from '../../data/categories';
 
 describe('CategoryComponent', () => {
   let component: CategoryComponent;
