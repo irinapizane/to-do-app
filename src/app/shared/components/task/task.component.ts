@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { categories } from '../../data/categories';
+import { categories } from '../../data/categoriesMocks';
 import { Task } from '../../models/category.model';
 
 @Component({
@@ -10,7 +10,7 @@ import { Task } from '../../models/category.model';
   styleUrls: ['./task.component.scss'],
 })
 export class TaskComponent implements OnInit, OnDestroy {
-  tasks: Task[] = [];
+  public tasks: Task[] = [];
   private unsubscribe$ = new Subject<void>();
 
   constructor(private route: ActivatedRoute) {}

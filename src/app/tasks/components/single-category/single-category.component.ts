@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { categories } from '../../../shared/data/categories';
+import { categories } from '../../../shared/data/categoriesMocks';
 import { Category } from '../../../shared/models/category.model'
 
 @Component({

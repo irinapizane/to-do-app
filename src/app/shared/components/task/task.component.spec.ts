@@ -6,7 +6,7 @@ import {
 } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
-import { categories } from '../../data/categories';
+import { categories } from '../../data/categoriesMocks';
 import { TaskComponent } from './task.component';
 
 describe('TaskComponent', () => {
