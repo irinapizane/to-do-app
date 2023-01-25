@@ -6,8 +6,9 @@
 
 .card {
     min-width: 12rem;
-    min-height: 7rem;
+    height: 8rem;
     background-color: $cardColor;
+    border-radius: 2rem;
     padding: 2rem 3rem 0;
     margin: 1rem;
     transform: translateY(0);
@@ -17,21 +18,18 @@
         transform: translateY(-3px);
         cursor: pointer;
     }
-
-    p {
-        margin-top: 1rem;
-        font-size: 1rem;
-    }
-
-    h3 {
-        margin-top: 0;
-    }
 }
 
-mat-icon {
-    margin: 0.25rem 0 0 2rem;
+.mat-icon {
+    font-size: 2rem;
 }
 
-:host ::ng-deep .mat-card-header-text {
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3 {
     margin: 0;
 }

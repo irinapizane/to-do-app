@@ -3,7 +3,6 @@
 $primaryColor: #DFD5EC;
 $textColor: #2c2c2c;
 $cardColor: #f1f1f1;
-$cardColor-white: #ffffff;
 
 @mixin container {
     width: 80%;
@@ -12,8 +11,9 @@ $cardColor-white: #ffffff;
 
 html,
 body {
-    min-height: 100%;
-    margin: 0 0 3rem 0;
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
     color: $textColor;
 }
 
@@ -26,5 +26,4 @@ h3 {
 h3 {
     font-weight: bold;
     font-size: 2rem;
-    margin-top: 2rem;
 }
