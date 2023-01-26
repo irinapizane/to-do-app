@@ -1,5 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {
+  ComponentFixture,
+  fakeAsync,
+  TestBed,
+  tick,
+} from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 import { TaskComponent } from './task.component';
 
 describe('TaskComponent', () => {

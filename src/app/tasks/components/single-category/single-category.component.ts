@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { categories } from '../../data/categories';
-import { Category } from '../../models/category.model';
+import { Category } from '../../../shared/models/category.model'
 
 @Component({
   selector: 'app-single-category',
