@@ -1,0 +1,22 @@
+@import "/src/styles.scss";
+.container {
+    @include container
+}
+
+.header {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   column-gap: 2rem;
+
+   h3 {
+    margin-top: 2rem;
+   }
+}
+
+.menu-button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}

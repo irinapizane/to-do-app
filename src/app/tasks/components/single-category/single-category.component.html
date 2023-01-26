@@ -1,1 +1,21 @@
-<p>single-category works!</p>
+<div *ngIf="category" class="container">
+  <div class="header">
+    <h3>{{ category.title | titlecase }}</h3>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu button" class="menu-button">
+      <mat-icon class="menu-icon">more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>edit</mat-icon>
+        <span>Edit category</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon><span class="material-symbols-outlined">
+            delete_forever
+          </span></mat-icon>
+        <span>Delete category</span>
+      </button>
+    </mat-menu>
+  </div>
+  <app-task class="task-card-list"></app-task>
+</div>
