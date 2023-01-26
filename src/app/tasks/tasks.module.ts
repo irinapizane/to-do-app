@@ -12,12 +12,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [
-        CategoryComponent,
-        CategoryListComponent,
-        SingleCategoryComponent,
-    ],
-    exports: [CategoryComponent, CategoryListComponent],
-    imports: [CommonModule, SharedModule, RouterModule.forChild(routes), SharedModule_1]
+  declarations: [
+    CategoryComponent,
+    CategoryListComponent,
+    SingleCategoryComponent,
+  ],
+  imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
+  exports: [CategoryComponent, CategoryListComponent],
 })
 export class TasksModule {}
