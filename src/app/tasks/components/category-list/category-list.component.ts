@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Category } from '../../../shared/models/category.model';
-import { categories as data } from '../../../shared/data/categoriesMocks';
+import { Category } from '../../models/category.model';
+import { categories as data } from 'src/app/tasks/data/categories';
 
 
 @Component({
