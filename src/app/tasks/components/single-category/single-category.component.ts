@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
+import { categories } from '../../../shared/data/categoriesMocks';
 import { Category } from '../../../shared/models/category.model'
 
 @Component({
@@ -16,10 +17,8 @@ export class SingleCategoryComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.route.params.pipe(takeUntil(this.unsubscribe$)).subscribe((params) => {
-      console.log('params.title', params.title);
-      console.log('categories', categories);
       const foundCategory = categories.find(
-        (c) => c.title.toLowerCase() === params.title.toLowerCase()
+        (c: { title: string; }) => c.title.toLowerCase() === params.title.toLowerCase()
       );
       if (foundCategory) {
         this.category = foundCategory;
