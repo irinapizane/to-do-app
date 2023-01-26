@@ -1,0 +1,30 @@
+<!-- This button triggers the overlay and is it's origin -->
+<button mat-button mat-raised-button color="primary" (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin">
+    <mat-icon>add</mat-icon> {{isOpen ? "Close" : "Create new task"}}
+</button>
+
+<!-- This template displays the overlay content and is connected to the button -->
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+    
+        <mat-card>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Input</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Select</mat-label>
+                    <mat-select>
+                      <mat-option value="one">First option</mat-option>
+                      <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput></textarea>
+                  </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+    
+</ng-template>

@@ -9,6 +9,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { TasksModule } from './tasks/tasks.module';
+import { CreateNewTaskComponent } from './components/layout/buttons/create-new-task/create-new-task.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TasksModule } from './tasks/tasks.module';
     AppComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreateNewTaskComponent
   ],
   imports: [
     BrowserModule,
