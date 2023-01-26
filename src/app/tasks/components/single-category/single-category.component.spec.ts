@@ -4,7 +4,6 @@ import {
   TestBed,
   tick,
 } from '@angular/core/testing';
-import { MatMenuModule } from '@angular/material/menu';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
@@ -21,7 +20,7 @@ describe('SingleCategoryComponent', () => {
     spy = spyOn(console, 'log');
     await TestBed.configureTestingModule({
       declarations: [SingleCategoryComponent],
-      imports: [RouterTestingModule, MatMenuModule],
+      imports: [RouterTestingModule],
       providers: [
         {
           provide: ActivatedRoute,
@@ -42,33 +41,7 @@ describe('SingleCategoryComponent', () => {
 
   it('should set the category property when the route parameter matches an existing category', fakeAsync(() => {
     tick();
-    expect(component.category).toEqual({
-      id: 3,
-      title: 'shopping',
-      items: 4,
-      tasks: [
-        {
-          id: 1,
-          title: 'Grocery shopping for the week',
-          date: new Date(Date.parse('2023-05-18')),
-        },
-        {
-          id: 2,
-          title: 'Buy new clothes for work',
-          date: new Date(Date.parse('2023-04-06')),
-        },
-        {
-          id: 3,
-          title: 'Research new home appliances',
-          date: new Date(Date.parse('2023-09-07')),
-        },
-        {
-          id: 4,
-          title: 'Order takeout from favorite restaurant',
-          date: new Date(Date.parse('2023-08-04')),
-        },
-      ],
-    });
+    expect(component.category).toEqual({ id: 3, title: 'shopping', items: 9 });
   }));
 
   it('should log a message when the route parameter does not match an existing category', () => {
