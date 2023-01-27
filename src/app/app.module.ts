@@ -9,7 +9,8 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { TasksModule } from './tasks/tasks.module';
-import { CreateNewTaskComponent } from './components/layout/buttons/create-new-task/create-new-task.component';
+import { CreateNewTaskComponent } from './components/layout/buttons/create-new-task-button/create-new-task/create-new-task.component';
+import { CreateNewTaskDialogComponent } from './components/layout/buttons/create-new-task-button/create-new-task-dialog/create-new-task-dialog.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CreateNewTaskComponent } from './components/layout/buttons/create-new-t
     HomeComponent,
     FooterComponent,
     HeaderComponent,
-    CreateNewTaskComponent
+    CreateNewTaskComponent,
+    CreateNewTaskDialogComponent
   ],
   imports: [
     BrowserModule,

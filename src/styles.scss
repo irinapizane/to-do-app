@@ -11,9 +11,10 @@ $cardColor: #f1f1f1;
 
 html,
 body {
-    height: 100%;
-    margin: 0;
+    min-height: 100%;
+    margin: 0 0 4rem;
     font-family: 'Poppins', sans-serif;
+    color: $textColor;
 }
 
 h1,
@@ -26,5 +27,4 @@ h3 {
     font-weight: bold;
     font-size: 2rem;
 }
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
