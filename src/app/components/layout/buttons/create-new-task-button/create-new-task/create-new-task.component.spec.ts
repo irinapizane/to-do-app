@@ -19,7 +19,6 @@ describe('CreateNewTaskComponent', () => {
     fixture = TestBed.createComponent(CreateNewTaskComponent);
     component = fixture.componentInstance;
     matDialog = TestBed.inject(MatDialog)
-    fixture.detectChanges();
   });
 
   it('should create', () => {

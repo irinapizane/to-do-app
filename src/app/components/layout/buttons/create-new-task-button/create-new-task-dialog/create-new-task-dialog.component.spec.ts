@@ -23,7 +23,6 @@ describe('CreateNewTaskDialogComponent', () => {
 
     fixture = TestBed.createComponent(CreateNewTaskDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
