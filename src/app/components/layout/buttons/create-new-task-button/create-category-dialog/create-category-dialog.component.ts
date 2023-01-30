@@ -11,11 +11,10 @@ export class CreateCategoryDialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<CreateCategoryDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: string
   ) { }
 
   saveCategory() {
     this.dialogRef.close(this.categoryName)
   }
-
 }

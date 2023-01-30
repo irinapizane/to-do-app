@@ -17,7 +17,7 @@ export class CreateNewTaskDialogComponent {
   categories = categories.map((category) => category.title);
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: number,
+    @Inject(MAT_DIALOG_DATA) public data: string,
     private matDialogRef: MatDialogRef<CreateNewTaskComponent>,
     private dialog: MatDialog
   ) {}
