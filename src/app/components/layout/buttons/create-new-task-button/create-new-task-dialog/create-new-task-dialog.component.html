@@ -10,14 +10,17 @@
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Add this task to the list:</mat-label>
-        <mat-select>
-            <mat-option *ngFor="let category of categories" [value]="category">
-                {{ category }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+    <div class="list-form-field">
+        <mat-form-field>
+            <mat-label>Add this task to the category:</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let category of categories" [value]="category">
+                    {{ category }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-icon matTooltip="Create a new category" (click)="openCreateCategoryDialog()">playlist_add</mat-icon>
+    </div>
 
     <div class="dialog-actions">
         <button mat-stroked-button color="primary" mat-dialog-close>Cancel</button>

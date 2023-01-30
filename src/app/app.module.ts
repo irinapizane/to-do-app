@@ -11,6 +11,8 @@ import { SharedModule } from './shared/shared.module';
 import { TasksModule } from './tasks/tasks.module';
 import { CreateNewTaskDialogComponent } from './components/layout/buttons/create-new-task-button/create-new-task-dialog/create-new-task-dialog.component';
 import { CreateNewTaskComponent } from './components/layout/buttons/create-new-task-button/create-new-task/create-new-task.component';
+import { CreateCategoryDialogComponent } from './components/layout/buttons/create-new-task-button/create-category-dialog/create-category-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,14 +22,16 @@ import { CreateNewTaskComponent } from './components/layout/buttons/create-new-t
     FooterComponent,
     HeaderComponent,
     CreateNewTaskComponent,
-    CreateNewTaskDialogComponent
+    CreateNewTaskDialogComponent,
+    CreateCategoryDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    TasksModule
+    TasksModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

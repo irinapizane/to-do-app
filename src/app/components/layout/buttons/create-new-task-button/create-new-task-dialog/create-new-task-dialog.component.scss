@@ -10,6 +10,16 @@
     }
 }
 
+.list-form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+mat-icon {
+    cursor: pointer;
+}
+
 .dialog-actions {
     margin-top: 1rem;
 

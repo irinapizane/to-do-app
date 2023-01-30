@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
@@ -12,7 +13,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [],
@@ -30,6 +31,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatNativeDateModule,
     MatInputModule,
     MatDividerModule,
+    MatTooltipModule,
   ],
   exports: [
     MatIconModule,
@@ -44,6 +46,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatNativeDateModule,
     MatInputModule,
     MatDividerModule,
+    MatTooltipModule,
   ],
 })
 export class MaterialModule {}
