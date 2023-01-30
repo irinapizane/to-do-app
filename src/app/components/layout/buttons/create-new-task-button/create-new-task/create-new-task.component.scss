@@ -1,19 +1,4 @@
-.dialog-form {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    row-gap: 1.25rem;
-    padding: 2.5rem;
-
-    h2 {
-        font-weight: 500;
-    }
-}
-
-.dialog-actions {
-    margin-top: 1rem;
-
-    button {
-        margin: 0.5rem;
-    }
+button {
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
 }

@@ -1,6 +1,6 @@
-import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Component } from '@angular/core';
 import { CreateNewTaskDialogComponent } from '../create-new-task-dialog/create-new-task-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-new-task',
@@ -8,10 +8,11 @@ import { CreateNewTaskDialogComponent } from '../create-new-task-dialog/create-n
   styleUrls: ['./create-new-task.component.scss'],
 })
 export class CreateNewTaskComponent {
-  categories = ['category1', 'category2', 'category3'];
+  constructor(private matDialog: MatDialog) {}
 
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public data: number,
-    private matDialogRef: MatDialogRef<CreateNewTaskDialogComponent>
-  ) {}
+  openDialog() {
+    let dialogRef = this.matDialog.open(CreateNewTaskDialogComponent, {
+      
+    });
+  }
 }

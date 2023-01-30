@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateNewTaskDialogComponent } from './create-new-task-dialog.component';
 
-describe('CreateNewTaskDialogComponent', () => {
+describe('CreateNewTaskComponent', () => {
   let component: CreateNewTaskDialogComponent;
   let fixture: ComponentFixture<CreateNewTaskDialogComponent>;
 
