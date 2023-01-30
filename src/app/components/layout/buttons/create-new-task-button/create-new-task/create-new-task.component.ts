@@ -11,8 +11,6 @@ export class CreateNewTaskComponent {
   constructor(private matDialog: MatDialog) {}
 
   openDialog() {
-    let dialogRef = this.matDialog.open(CreateNewTaskDialogComponent, {
-      
-    });
+    this.matDialog.open(CreateNewTaskDialogComponent, {});
   }
 }
