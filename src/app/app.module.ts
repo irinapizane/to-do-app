@@ -9,6 +9,11 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { TasksModule } from './tasks/tasks.module';
+import { CreateNewTaskDialogComponent } from './components/layout/buttons/create-new-task-button/create-new-task-dialog/create-new-task-dialog.component';
+import { CreateNewTaskComponent } from './components/layout/buttons/create-new-task-button/create-new-task/create-new-task.component';
+import { CreateCategoryDialogComponent } from './components/layout/buttons/create-new-task-button/create-category-dialog/create-category-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -16,14 +21,19 @@ import { TasksModule } from './tasks/tasks.module';
     AppComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreateNewTaskComponent,
+    CreateNewTaskDialogComponent,
+    CreateCategoryDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    TasksModule
+    TasksModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

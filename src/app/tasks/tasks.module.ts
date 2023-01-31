@@ -17,6 +17,6 @@ const routes: Routes = [
     SingleCategoryComponent
   ],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
-  exports: [CategoryComponent, CategoryListComponent],
+  exports: [CategoryComponent, CategoryListComponent, SingleCategoryComponent],
 })
 export class TasksModule {}

@@ -1,0 +1,9 @@
+@import "/src/styles.scss";
+.container {
+    @include container
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}

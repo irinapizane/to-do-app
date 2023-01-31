@@ -1,0 +1,29 @@
+<div class="dialog-form">
+    <h2 mat-dialog-title>Create New Task</h2>
+    <mat-form-field>
+        <input matInput [formControl]="taskNameCtrl" placeholder="Enter task name here...">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <div class="list-form-field">
+        <mat-form-field>
+            <mat-label>Add this task to the category:</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let category of categories" [value]="category">
+                    {{ category }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-icon matTooltip="Create new category" (click)="openCreateCategoryDialog()">playlist_add</mat-icon>
+    </div>
+
+    <div class="dialog-actions">
+        <button mat-stroked-button color="primary" mat-dialog-close>Cancel</button>
+        <button mat-flat-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>Save the task</button>
+    </div>
+</div>
