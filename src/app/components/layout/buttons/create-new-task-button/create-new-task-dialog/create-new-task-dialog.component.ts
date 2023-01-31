@@ -7,6 +7,7 @@ import {
 import { CreateNewTaskComponent } from '../create-new-task/create-new-task.component';
 import { categories } from 'src/app/shared/data/categoriesMocks';
 import { CreateCategoryDialogComponent } from '../create-category-dialog/create-category-dialog.component';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-create-new-task-dialog',
@@ -14,6 +15,7 @@ import { CreateCategoryDialogComponent } from '../create-category-dialog/create-
   styleUrls: ['./create-new-task-dialog.component.scss'],
 })
 export class CreateNewTaskDialogComponent {
+  taskNameCtrl = new FormControl('')
   categories = categories.map((category) => category.title);
 
   constructor(
