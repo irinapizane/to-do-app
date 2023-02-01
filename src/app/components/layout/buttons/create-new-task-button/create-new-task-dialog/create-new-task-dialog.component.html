@@ -7,11 +7,10 @@
     </mat-form-field>
 
     <mat-form-field>
-        <input matInput formControlName="date" [matDatepicker]="picker" placeholder="Choose a date">
+        <input matInput formControlName="date" [matDatepicker]="picker" [min]="minDate" placeholder="Choose a date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
         <mat-error *ngIf="dateCtrl.hasError('required')">Date is required</mat-error>
-        <mat-error *ngIf="dateCtrl.hasError('dateInvalid')">Date must be today or later</mat-error>
     </mat-form-field>
 
     <div class="list-form-field">
@@ -22,7 +21,7 @@
                     {{ category }}
                 </mat-option>
             </mat-select>
-            <mat-error *ngIf="categoryCtrl.hasError('required')">Category is required</mat-error>
+            <mat-error *ngIf="categoryCtrl.hasError('required')">category is required</mat-error>
         </mat-form-field>
         <mat-icon matTooltip="Create new category" (click)="openCreateCategoryDialog()">playlist_add</mat-icon>
     </div>

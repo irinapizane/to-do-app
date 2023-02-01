@@ -19,13 +19,9 @@ export class CreateNewTaskDialogComponent {
     Validators.required,
     Validators.minLength(3),
   ]);
-  dateCtrl = new FormControl('', [
-    Validators.required,
-    (control: FormControl) =>
-      new Date(control.value) >= new Date() ? null : { dateInvalid: true },
-  ]);
+  dateCtrl = new FormControl(new Date(), [Validators.required]);
   categoryCtrl = new FormControl('', [Validators.required]);
-  
+
   form = new FormGroup({
     taskName: this.taskNameCtrl,
     date: this.dateCtrl,
@@ -33,6 +29,7 @@ export class CreateNewTaskDialogComponent {
   });
 
   categories = categories.map((category) => category.title);
+  minDate = new Date();
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: string,
