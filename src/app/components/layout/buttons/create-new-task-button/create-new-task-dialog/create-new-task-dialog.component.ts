@@ -7,7 +7,7 @@ import {
 import { CreateNewTaskComponent } from '../create-new-task/create-new-task.component';
 import { categories } from 'src/app/shared/data/categoriesMocks';
 import { CreateCategoryDialogComponent } from '../create-category-dialog/create-category-dialog.component';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-new-task-dialog',
@@ -15,7 +15,23 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./create-new-task-dialog.component.scss'],
 })
 export class CreateNewTaskDialogComponent {
-  taskNameCtrl = new FormControl('')
+  taskNameCtrl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(3),
+  ]);
+  dateCtrl = new FormControl('', [
+    Validators.required,
+    (control: FormControl) =>
+      new Date(control.value) >= new Date() ? null : { dateInvalid: true },
+  ]);
+  categoryCtrl = new FormControl('', [Validators.required]);
+  
+  form = new FormGroup({
+    taskName: this.taskNameCtrl,
+    date: this.dateCtrl,
+    category: this.categoryCtrl,
+  });
+
   categories = categories.map((category) => category.title);
 
   constructor(
