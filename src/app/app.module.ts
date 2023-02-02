@@ -24,7 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     CreateNewTaskComponent,
     CreateNewTaskDialogComponent,
-    CreateCategoryDialogComponent
+    CreateCategoryDialogComponent,
   ],
   imports: [
     BrowserModule,
