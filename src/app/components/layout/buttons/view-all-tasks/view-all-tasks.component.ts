@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-view-all-tasks',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-all-tasks.component.scss']
 })
 export class ViewAllTasksComponent {
+  @Input() text: string;
 
   constructor() { }
 }

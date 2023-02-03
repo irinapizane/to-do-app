@@ -10,9 +10,7 @@ export class TaskService {
 
   constructor() {
     categories.forEach((category) => {
-      if (category.tasks) {
-        this.tasks = [...this.tasks, ...category.tasks];
-      }
+      this.tasks = [...this.tasks, ...(category.tasks ? category.tasks : [])];
     });
   }
 
