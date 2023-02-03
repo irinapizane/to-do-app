@@ -1,0 +1,36 @@
+@import "/src/styles.scss";
+
+.card {
+    min-width: 4rem;
+    min-height: 6rem;
+    max-width: 30%;
+    border: 0.1rem solid;
+    border-color: $cardColor;
+    padding: 1.5rem 0 0 3rem;
+    margin: 2rem auto;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.menu-button {
+    background-color: #fff;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+mat-card-header, mat-card-subtitle {
+    margin-top: 1rem !important;
+}

@@ -13,6 +13,7 @@ import { CreateNewTaskDialogComponent } from './components/layout/buttons/create
 import { CreateNewTaskComponent } from './components/layout/buttons/create-new-task-button/create-new-task/create-new-task.component';
 import { CreateCategoryDialogComponent } from './components/layout/buttons/create-new-task-button/create-category-dialog/create-category-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewAllTasksComponent } from './components/layout/buttons/view-all-tasks/view-all-tasks.component';
 
 
 
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     CreateNewTaskComponent,
     CreateNewTaskDialogComponent,
-    CreateCategoryDialogComponent
+    CreateCategoryDialogComponent,
+    ViewAllTasksComponent
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,10 @@
-<div class="buttons"><app-create-new-task></app-create-new-task></div>
-<app-category-list></app-category-list>
+<div class="buttons">
+    <app-view-all-tasks (click)="toggle()"></app-view-all-tasks>
+    <app-create-new-task></app-create-new-task>
+</div>
+<app-category-list *ngIf="showCategories"></app-category-list>
+<div *ngIf="!showCategories">
+    <div *ngFor="let task of tasks">
+        <app-task-card [task]="task"></app-task-card>
+    </div>
+</div>
