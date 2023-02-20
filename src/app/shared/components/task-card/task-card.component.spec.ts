@@ -16,7 +16,6 @@ describe('TaskCardComponent', () => {
     fixture = TestBed.createComponent(TaskCardComponent);
     component = fixture.componentInstance;
     component.task = { title: 'Test task', id: 1, date: new Date()}
-    fixture.detectChanges();
   });
 
   it('should create', () => {

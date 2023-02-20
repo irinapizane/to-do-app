@@ -5,7 +5,7 @@ import { TaskService } from './task-service.service';
 describe('TaskServiceService', () => {
   let service: TaskService;
   let categories: (
-    | { name: string; tasks: { name: string }[] }
+      { name: string; tasks: { name: string }[] }
     | { name: string; tasks?: undefined }
   )[];
 
