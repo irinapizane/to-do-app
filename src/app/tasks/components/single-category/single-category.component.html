@@ -17,5 +17,7 @@
       </button>
     </mat-menu>
   </div>
-  <app-task class="task-card-list"></app-task>
+  <div *ngFor="let task of category.tasks">
+    <app-task-card [task]="task" class="task-card-list"></app-task-card>
+  </div>
 </div>
